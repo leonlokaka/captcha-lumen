@@ -19,6 +19,7 @@ class CaptchaServiceProvider extends ServiceProvider {
     public function boot()
     {
         // HTTP routing
+        
         $this->app->router->get('captchaInfo[/{type}]', 'Yangbx\CaptchaLumen\LumenCaptchaController@getCaptchaInfo');
         $this->app->router->get('captcha/{type}/{captchaId}', 'Yangbx\CaptchaLumen\LumenCaptchaController@getCaptcha');
 
